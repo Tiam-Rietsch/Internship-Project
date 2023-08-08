@@ -1,11 +1,49 @@
+
+
+
+/* 
+* ===================================================================
+*
+* Root Variables
+*
+*====================================================================
+*/
+
 :root {
     --main-bg-color: #003366;
     --main-fg-color: #FFF6E0;
     --secondary-bg-color: #79A579;
+    --secondary-border-color: #1F5B1F;
     --secondary-fg-color: #E0E0E0;
     --third-bg-color: #666666;
     --third-fg-color: #F7F7F7;
 }
+/* 
+* ===================================================================
+*
+* GENERAL CONFIG
+*
+*====================================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+
 
 /* 
 * ===================================================================
@@ -14,6 +52,83 @@
 *
 *====================================================================
 */
+
+header {
+    position: relative;
+    display: flex;
+    padding: 0 2em;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 10vh;
+    background-color: var(--main-bg-color)
+}
+
+#logo-image {
+    margin-top: 1.2em;
+    color: var(--main-fg-color);
+    height:2.5em;
+    width: 2.5em;
+}
+
+#option-menu {
+    margin-top: 0.6em;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#language-select {
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+    font-size: 1.2em;
+}
+
+#login-btn-link {
+    color: var(--main-fg-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+#login-btn-link:hover {
+    color: var(--secondary-bg-color);
+}
+
+#signup-btn-link {
+    padding: 10px 20px;
+    border: 2px solid var(--secondary-border-color);
+    border-radius: 50px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-fg-color);
+    transition: 0.2s ease;
+}
+
+#signup-btn-link:hover {
+    background-color: var(--main-bg-color);
+    color: var(--secondary-bg-color);
+    border-color: var(--secondary-bg-color);
+}
+
+.navbar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-link {
+    color: var(--main-fg-color)
+}
+
+
 
 /* 
 * ===================================================================
