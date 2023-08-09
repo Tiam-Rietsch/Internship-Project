@@ -218,7 +218,7 @@ header {
 #offers-container h2 {
     position: relative;
     margin-bottom: 20px;
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 #offers-container h2::after {
@@ -243,19 +243,40 @@ header {
 
 .internship-card {
     height: 45%;
-    width: 20%;
-    border: 1px solid gray;
+    width: 23%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin-left: 5%;
+    margin-left: 2%;
+    margin-bottom: 2rem;
 }
 
 .internship-card .image-section {
     height: 60%;
     width: 100%;
     background-color: var(--light-gray-bg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
+
+.internship-card .detail-section {
+    height: 40%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--main-bg-color);
+    padding-left: 1rem
+}
+
+.internship-card p {
+    margin-bottom: 2px;
+}
+
+.internship-card p {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+}
+
 
 
 
