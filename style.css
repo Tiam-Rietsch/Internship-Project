@@ -161,7 +161,52 @@ header {
     position: sticky;
     top: 500px;
     left: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+#item-search-wrapper {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-search-bar {
+    width: 80%;
+    height: 40px;
+    display: flex;
+}
+
+#item-search-bar button {
+    height: inherit;
+    width: 20%;
+    background-color: var(--main-bg-color);
+}
+
+#item-search-bar button img {
+    height: 70%;
+    width: 70%;
+}
+
+#item-search-bar input {
+    height: inherit;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+#field-item-wrapper {
+    height: 90%;
+    padding-left: 1em;
+}
+
+.field-item {
+    margin-top: 2em;
+}
+
+
+
 
 #offers-wrapper {
     display: flex;
