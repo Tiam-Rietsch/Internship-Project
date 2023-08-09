@@ -17,6 +17,8 @@
     --secondary-fg-color: #E0E0E0;
     --third-bg-color: #666666;
     --third-fg-color: #F7F7F7;
+    --light-gray-bg: #DCDDE4;
+    --light-gray-fg: #878BA0;
 }
 /* 
 * ===================================================================
@@ -54,14 +56,16 @@ li {
 */
 
 header {
-    position: relative;
+    position: fixed;
+    width: 100%;
     display: flex;
     padding: 0 2em;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
     height: 10vh;
-    background-color: var(--main-bg-color)
+    background-color: var(--main-bg-color);
+    z-index: 1000;
 }
 
 #logo-image {
@@ -137,6 +141,190 @@ header {
 *
 *====================================================================
 */
+
+/* Hero section */
+#hero-section {
+    height: 40vh;
+    background-image: url('assets/school-pub.jpg');
+    background-size: cover;
+}
+
+#main-section {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 90vh;
+    width: 100%;
+}
+
+#fields-sidebar {
+    background-color: var(--secondary-bg-color);
+    position: sticky;
+    top: 500px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-search-wrapper {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-search-bar {
+    width: 80%;
+    height: 40px;
+    display: flex;
+}
+
+#item-search-bar button {
+    height: inherit;
+    width: 20%;
+    background-color: var(--main-bg-color);
+}
+
+#item-search-bar button img {
+    height: 70%;
+    width: 70%;
+}
+
+#item-search-bar input {
+    height: inherit;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+#field-item-wrapper {
+    height: 90%;
+    padding-left: 1em;
+}
+
+.field-item {
+    margin-top: 2em;
+}
+
+
+
+
+#offers-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#company-description {
+    width: 100%;
+    padding: 20px 15%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#desc-image {
+    height: 90%;
+    width: 50%;
+    background-color: black;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+#desc-text {
+    height: 90%;
+    width: 50%;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+#desc-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#desc-text p {
+    font-size: 0.9em;
+}
+
+#offers-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    padding: 10px;
+}
+
+#offers-container h2 {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 2%;
+}
+
+#offers-container h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 50px;
+    border: 2px solid black;
+}
+
+#offers-list {
+    padding-right: 20px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.internship-card {
+    height: 45%;
+    width: 23%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-bottom: 2rem;
+}
+
+.internship-card .image-section {
+    height: 60%;
+    width: 100%;
+    background-color: var(--light-gray-bg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.internship-card .detail-section {
+    height: 40%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--main-bg-color);
+    padding-left: 1rem
+}
+
+.internship-card p {
+    margin-bottom: 2px;
+}
+
+.internship-card p {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+
+
+
 
 /* 
 * ===================================================================
