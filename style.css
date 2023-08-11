@@ -160,14 +160,19 @@ header {
 *====================================================================
 */
 main {
-    height: fit-content;
+    height: 250vh;
 }
 
 /* Hero section */
 #hero-section {
     height: 60vh;
-    background-image: url('assets/school-pub.jpg');
-    background-size: cover;
+    width: 100%;
+}
+
+#hero-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;    
 }
 
 #main-section {
@@ -175,14 +180,13 @@ main {
     grid-template-columns: 1fr 5fr;
     height: max-content;
     width: 100%;
-
-}
+    height: 190vh;
+}   
 
 #fields-sidebar {
     background-color: white;
-    height: 90vh;
+    height: 100%;
     display: flex;
-    overflow-y: scroll;
     flex-direction: column;
     box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
     -webkit-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
@@ -226,7 +230,8 @@ main {
 
 #field-item-wrapper {
     height: 90%;
-    color: var(--cover-fg)
+    color: var(--cover-fg);
+    overflow-y: scroll;
 }
 
 .field-item {
@@ -257,7 +262,7 @@ main {
     align-items: center;
     flex-direction: column;
     grid-column-start: 2;
-    height: fit-content;
+    height: 160vh;
 }
 
 
@@ -320,7 +325,7 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    height: fit-content;
+    min-height: 150vh;
     width: 100%;
     padding: 10px;
     padding-top: 3em;
@@ -346,16 +351,17 @@ main {
     margin-top: 2em;
     padding-right: 20px;
     width: 100%;
-    height: fit-content;
+    height: 120vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .internship-card {
-    height: 45%;
+    position: relative;
+    height: 30%;
     width: 23%;
     display: flex;
     justify-content: flex-start;
@@ -373,18 +379,31 @@ main {
 .internship-card .image-section {
     height: 60%;
     width: 100%;
+    object-fit: cover;
     background-color: var(--light-gray-bg);
     /* border-top-left-radius: 10px;
     border-top-right-radius: 10px; */
 }
 
+
 .internship-card .detail-section {
+    position: relative;
     height: 40%;
     width: 100%;
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
     border: 1px solid rgba(0, 0, 0, 0.172);
     padding-left: 1rem
+}
+
+.internship-card .detail-section .company-logo {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    transform: translateY(-60%);
+    height: 50%;
+    width: 20%;
+    border-radius: 5px;
 }
 
 .internship-card p {
@@ -410,7 +429,7 @@ main {
 
 
 #partners-section {
-    height: 50vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -424,6 +443,9 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--beige);
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 #partners-wrapper {
@@ -441,6 +463,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1em;
 }
 
 .partner-title h2 {
@@ -459,10 +482,12 @@ main {
 }
 
 .partner-images img {
-    height: 50px;
-    width: 50px;
-    object-fit: fill;
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
     margin: 0.7em 1.5em 0 0;
+    mix-blend-mode: color-burn;
 }
 
 #newsletter {
@@ -475,6 +500,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#newsletter-title h1 {
+    color: var(--actionable-color);
 }
 
 #newsletter-form {

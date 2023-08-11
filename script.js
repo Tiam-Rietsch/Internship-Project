@@ -22,7 +22,7 @@ window.addEventListener('scroll', (e) => {
   if ((offersWrapperRect.top > (headerRect.top + headerRect.height)) || footerRect.top <= window.innerHeight) {
     sidebar.style['position'] = 'relative'
     sidebar.style['top'] = '0'
-    sidebar.style['height'] = 'unset'
+    sidebar.style['height'] = '100%'
     sidebar.style['width'] = 'unset'
   }
 })
