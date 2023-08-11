@@ -21,7 +21,7 @@
     --light-gray-fg: #878BA0;
 
     --primary-color: #6A5ACD;
-    --cover-color: #FFBF00;
+    --cover-color: #00FF00;
     --cover-color-light: #ffbf0075;
     --actionable-color: #008080;
 
@@ -165,7 +165,7 @@ main {
 
 /* Hero section */
 #hero-section {
-    height: 40vh;
+    height: 60vh;
     background-image: url('assets/school-pub.jpg');
     background-size: cover;
 }
@@ -173,20 +173,21 @@ main {
 #main-section {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    height: fit-content;
+    height: max-content;
     width: 100%;
+
 }
 
 #fields-sidebar {
     background-color: white;
-    position: sticky;
-    top: 500px;
-    left: 0;
+    height: 90vh;
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
     -webkit-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
     -moz-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
+    transition: 0.2s ease;
 }
 
 #item-search-wrapper {
@@ -255,13 +256,15 @@ main {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    grid-column-start: 2;
+    height: fit-content;
 }
 
 
 #company-description {
     width: 100%;
     padding: 20px 15%;
-    height: 60vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,14 +289,14 @@ main {
 }
 
 #desc-text h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
 
 #desc-text p {
-    font-size: 1em;
-    line-height: 2em;
+    font-size: 0.7em;
+    line-height: 1.5em;
 }
 
 #desc-text button {
@@ -463,9 +466,10 @@ main {
 }
 
 #newsletter {
-    height: 20vh;
+    height: 15vh;
+    padding: 3em;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: rgb(14, 14, 14);
     color: var(--primary-fg);
     display: flex;
     flex-direction: column;
@@ -476,15 +480,15 @@ main {
 #newsletter-form {
     display: flex;
     justify-content: space-around;
-    width: 50%;
-    margin-top: 2em;
+    width: 40%;
+    margin-top: 1em;
     height: 50px;
 }
 
 #newsletter-form input {
     height: inherit;
     width: 70%;
-    font-size: 1.2em;
+    font-size: 1em;
     padding-left: 1em;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.065)
@@ -493,18 +497,18 @@ main {
 #newsletter-form button {
     height: inherit;
     width: 25%;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 500;
-    background-color: var(--cover-color);
-    color: var(--cover-fg)
+    background-color: var(--actionable-color);
+    color: var(--primary-fg)
 }
 
 #index {
     height: fit-content;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: rgb(14, 14, 14);
     color: var(--primary-fg);
-    padding: 3em 10rem 3em 10rem;
+    padding: 1em 10rem 1em 10rem;
 }
 
 #index-list-wrapper {
@@ -513,6 +517,7 @@ main {
     border-bottom: 2px solid var(--primary-fg);
     padding-left: 10em;
     padding-right: 10em;
+    font-size: 0.8em;
 }
 
 .index-list-container {
@@ -523,7 +528,7 @@ main {
 }
 
 .index-list-container h3 {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .index-list-container ul {
@@ -534,7 +539,7 @@ main {
 }
 
 .index-list-container ul li {
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
 }
 
 #more-info-wrapper {
