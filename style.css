@@ -10,15 +10,6 @@
 */
 
 :root {
-    --main-bg-color: #003366;
-    --main-fg-color: #FFF6E0;
-    --secondary-bg-color: #79A579;
-    --secondary-border-color: #1F5B1F;
-    --secondary-fg-color: #E0E0E0;
-    --third-bg-color: #666666;
-    --third-fg-color: #F7F7F7;
-    --light-gray-bg: #DCDDE4;
-    --light-gray-fg: #878BA0;
 
     --primary-color: #6A5ACD;
     --cover-color: #00FF00;
@@ -88,7 +79,7 @@ header {
 
 #logo-image {
     margin-top: 1.2em;
-    color: var(--main-fg-color);
+    color: var(--primary-fg);
     height:2.5em;
     width: 2.5em;
 }
@@ -103,12 +94,12 @@ header {
 
 #language-select {
     background-color: var(--primary-color);
-    color: var(--main-fg-color);
+    color: var(--primary-fg);
     font-size: 1.2em;
 }
 
 #login-btn-link {
-    color: var(--main-fg-color);
+    color: var(--primary-fg);
     font-size: 1.2em;
     font-weight: 600;
     transition: 0.2s ease;
@@ -147,7 +138,7 @@ header {
 }
 
 .nav-link {
-    color: var(--main-fg-color)
+    color: var(--primary-fg);
 }
 
 
