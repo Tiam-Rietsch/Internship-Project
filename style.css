@@ -12,7 +12,8 @@
 :root {
 
     --primary-color: #6A5ACD;
-    --cover-color: #00FF00;
+    /* --cover-color: #FFD700; */
+    --cover-color: #ADD8E6;
     --cover-color-light: #ffbf0075;
     --actionable-color: #008080;
 
@@ -129,16 +130,57 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
+    height: 45%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    column-gap: 0px;
 }
 
 .nav-link {
+    position: relative;
     color: var(--primary-fg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    transition: 0.2s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--cover-color);
+}
+
+.nav-link:hover::after {
+    background-color: rgba(0, 0, 0, 0.122);
+}
+
+.nav-link.active {
+    color: var(--cover-color)
+}
+
+.nav-link.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width:30%;
+    transform: translate(-50%);
+    border: 2px solid var(--cover-color)
 }
 
 
@@ -182,7 +224,6 @@ main {
     box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
     -webkit-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
     -moz-box-shadow: 4px -3px 14px -6px rgba(119, 119, 119, 0.75);
-    transition: 0.2s ease;
 }
 
 #item-search-wrapper {
@@ -406,6 +447,30 @@ main {
     margin-top: 0.8rem;
 }
 
+.share-offer-section {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin: 0.5em 1em;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.share-offer-section:hover {
+    background-color: #cee1e1;
+}
+
+.share-offer-section img {
+    height: 20px;
+    width: 20px;
+    color: black;
+}
+
 
 
 
@@ -493,10 +558,6 @@ main {
     align-items: center;
 }
 
-#newsletter-title h1 {
-    color: var(--actionable-color);
-}
-
 #newsletter-form {
     display: flex;
     justify-content: space-around;
@@ -521,6 +582,10 @@ main {
     font-weight: 500;
     background-color: var(--actionable-color);
     color: var(--primary-fg)
+}
+
+#newsletter-form button:hover {
+    background-color: #039696;
 }
 
 #index {
