@@ -1,3 +1,5 @@
+
+// this handles the sticky scroll of the sidebar 
 window.addEventListener('scroll', (e) => {
   
   const sidebar = document.querySelector('#fields-sidebar')
@@ -26,3 +28,33 @@ window.addEventListener('scroll', (e) => {
     sidebar.style['width'] = 'unset'
   }
 })
+
+// this handles the swap action of the signup block
+function handleNextBlock() {
+  const signupBlocks = document.querySelectorAll('.form-main .block')
+  const followButton = document.querySelector('#follow-button')
+  const signupButton = document.querySelector('#signup-button')
+
+  if (signupBlocks[0].classList.contains('current')) {
+    signupBlocks[0].style['left'] = '-120%'
+    signupBlocks[0].classList.remove('current')
+
+    signupBlocks[1].style['left'] = '0'
+    signupBlocks[1].classList.add('current')
+
+    followButton.innerHTML = '<< precedent'
+    signupButton.removeAttribute('disabled')
+    signupButton.style['background-color'] = 'black'
+  } else {
+    signupBlocks[1].style['left'] = '120%'
+    signupBlocks[1].classList.remove('current')
+
+    signupBlocks[0].style['left'] = '0'
+    signupBlocks[0].classList.add('current')
+
+    followButton.innerHTML = 'suivant >>'
+    signupButton.setAttribute('disabled', true)
+    signupButton.style['background-color'] = 'rgba(255, 255, 255, 0.211)'
+
+  }
+}

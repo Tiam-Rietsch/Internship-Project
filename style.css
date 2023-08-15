@@ -1,4 +1,22 @@
-
+/*
+*====================================================================
+*                       TABLE OF CONTENT                             
+*
+* ROOT VARIABLES
+*   
+* GENEARAL CONFIG 
+*   
+* HEADER 
+*
+* MAIN
+*   1. Index main section
+*   2. Signup main section
+*
+* FOOTER
+* 
+*        
+*====================================================================
+*/
 
 
 /* 
@@ -192,11 +210,14 @@ header {
 *
 *====================================================================
 */
-main {
+
+
+/* Index main section */
+
+#index-main {
     height: 250vh;
 }
 
-/* Hero section */
 #hero-section {
     height: 60vh;
     width: 100%;
@@ -413,8 +434,6 @@ main {
     width: 100%;
     object-fit: cover;
     background-color: var(--light-gray-bg);
-    /* border-top-left-radius: 10px;
-    border-top-right-radius: 10px; */
 }
 
 
@@ -422,8 +441,6 @@ main {
     position: relative;
     height: 40%;
     width: 100%;
-    /* border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
     border: 1px solid rgba(0, 0, 0, 0.172);
     padding-left: 1rem
 }
@@ -472,8 +489,202 @@ main {
 }
 
 
+/* Signup main section */
+
+#signup-main,
+#login-main {
+    position: relative;
+    background-image: url('assets/images/signup_cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-filter {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    background-color: #00808000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-form,
+#login-form {
+    height: 90%;
+    width: 30%;
+    background-color: rgba(80, 80, 80, 0.415);
+    box-shadow: 0px 0px 50px -5px rgba(163, 163, 163, 0.459) inset;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(145, 144, 144, 0.439);
+    padding: 1em 2em;
+}
+
+#login-form {
+    height: 70%;
+}
+
+.form-header {
+    height: 10%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-main {
+    position: relative;
+    height: 65%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.block {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    transition: 0.4s ease;
+}
+
+#block-1 {
+    top: 0;
+    left: 0;
+}
+
+#block-2 {
+    top: 0;
+    left: 120%;
+}
+
+.name-input {
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 1em;
+}
+
+.form-input,
+.check-input,
+#social-connect {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-input {
+    height: 20px;
+}
+
+.form-input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.43);
+    font-size: 1em;
+}
 
 
+.form-input label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+    color: rgb(49, 49, 49);
+    pointer-events: none;
+}
+
+.form-input a {
+    color: white;
+}
+
+.form-input a:hover {
+    color: var(--actionable-color);
+}
+
+.form-input input:focus,
+.form-input input:valid {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.form-input input:focus~label,
+.form-input input:valid~label {
+    top: 10px;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: white;
+}
+
+.check-input label {
+    color: white;
+}
+
+#social-connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.connect-option {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.connect-option img {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+}
+
+.form-action {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#follow-button,
+#signup-button,
+#login-button {
+    width: 70%;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#signup-button {
+    background-color: rgba(255, 255, 255, 0.211);
+    color: white;
+}
 
 /* 
 * ===================================================================
