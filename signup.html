@@ -32,7 +32,7 @@
     </header>
     <main id="signup-main">
         <div class="main-filter">
-            <form id="signup-form" action="">
+            <form id="signup-form" action="" method="POST" enctype="multipart/form-data">
                 <div class="form-header">
                     <h2>Inscrivez vous c'est gratuit !</h2>
                 </div>
@@ -74,6 +74,13 @@
                         </div>
                     </div>
                     <div id="block-2" class="block">
+                        <div class="picture-input">
+                            <input type="file" accept=".png, .jpg, .jpeg" id="profile-picture" onchange="loadProfilePicture(event)">
+                            <label for="profile-picture">
+                                <img src="assets/icons/camera.svg" alt="">
+                            </label>
+                            <img id="profile-display" src="assets/icons/user.svg" alt="">
+                        </div>
                         <div class="form-input">
                             <input type="email" required>
                             <label for="">Nom d'utilisateur</label>
@@ -91,7 +98,7 @@
                 </div>
                 <div class="form-action">
                     <button id="signup-button" type="submit" disabled>S'inscrire</button>
-                    <button id="follow-button" type="button" onclick="handleNextBlock()">suivant</button>
+                    <button id="follow-button" type="button" onclick="handleNextBlock()">suivant >></button>
                     <div class="form-input">
                         <p>deja un compte ? <a href="login.html">connectez vous maintenant</a></p>
                     </div>
