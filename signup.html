@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-main">
                     <div id="block-1" class="block current">
-                        <!-- <div class="name-input">
+                        <div class="name-input">
                             <div class="form-input">
                                 <input type="text" required>
                                 <label for="">Nom</label>
@@ -71,13 +71,15 @@
                             <a class="connect-option" href="#">
                                 <img src="assets/icons/facebook.svg" alt="">
                             </a>
-                        </div> -->
+                        </div>
                     </div>
                     <div id="block-2" class="block">
                         <div class="picture-input">
-                            <input type="file" accept=".png, .jpg, .jpeg" id="profile-picture">
-                            <label for="profile-picture">img</label>
-                            <img src="" alt="">
+                            <input type="file" accept=".png, .jpg, .jpeg" id="profile-picture" onchange="loadProfilePicture(event)">
+                            <label for="profile-picture">
+                                <img src="assets/icons/camera.svg" alt="">
+                            </label>
+                            <img id="profile-display" src="assets/icons/user.svg" alt="">
                         </div>
                         <div class="form-input">
                             <input type="email" required>

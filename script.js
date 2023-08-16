@@ -58,3 +58,9 @@ function handleNextBlock() {
 
   }
 }
+
+function loadProfilePicture(event) {
+  const profilePicture = event.target.files[0]
+  const profileDisplay = document.querySelector('#profile-display')
+  profileDisplay.src = URL.createObjectURL(profilePicture)
+} 

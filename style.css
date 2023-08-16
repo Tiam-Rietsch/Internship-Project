@@ -645,7 +645,12 @@ header {
     width: 120px;
     border-radius: 50%;
     background-color: #ffffff6e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
+
 
 .picture-input label {
     position: absolute;
@@ -656,6 +661,32 @@ header {
     width: 30px;
     border-radius: 50%;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: 0.2s ease;
+}
+
+.picture-input label:hover {
+    background-color: rgba(255, 255, 255, 0.407);
+}
+
+.picture-input input {
+    display: none;
+}
+
+.picture-input label img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#profile-display {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: fill;
 }
 
 #social-connect {
