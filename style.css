@@ -333,9 +333,9 @@ header {
 #desc-image {
     height: 90%;
     width: 50%;
-    background-color: black;
     margin-left: 30px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 #desc-text {
@@ -494,7 +494,7 @@ header {
 #signup-main,
 #login-main {
     position: relative;
-    background-image: url('assets/images/signup_cover.jpg');
+    background-image: url('assets/images/black\ background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -517,7 +517,7 @@ header {
 #login-form {
     height: 90%;
     width: 30%;
-    background-color: rgba(80, 80, 80, 0.415);
+    background-color: #5050506a;
     box-shadow: 0px 0px 50px -5px rgba(163, 163, 163, 0.459) inset;
     border-radius: 10px;
     backdrop-filter: blur(20px);
@@ -598,7 +598,7 @@ header {
     width: 100%;
     outline: none;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.43);
+    background-color: #ffffff6e;
     font-size: 1em;
 }
 
@@ -637,6 +637,25 @@ header {
 
 .check-input label {
     color: white;
+}
+
+.picture-input {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #ffffff6e;
+}
+
+.picture-input label {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    transform: translateX(20%);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 #social-connect {
