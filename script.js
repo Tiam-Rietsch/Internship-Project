@@ -13,9 +13,10 @@ window.addEventListener('scroll', (e) => {
 
 
 
+
   if ((sidebarRect.top <=  (headerRect.top + headerRect.height)) && footerRect.top > window.innerHeight) {
     sidebar.style['position'] = 'fixed'
-    sidebar.style['top'] = '10vh'
+    sidebar.style['top'] = '12vh'
     sidebar.style['height'] = '90vh'
     sidebar.style['width'] = '16.66%'
     sidebar.style['left'] = '0'
@@ -43,7 +44,7 @@ function handleNextBlock() {
     signupBlocks[1].classList.add('current')
 
     followButton.innerHTML = '<< precedent'
-    signupButton.removeAttribute('disabled')
+    signupButton.style['display'] = 'inline'
     signupButton.style['background-color'] = 'black'
   } else {
     signupBlocks[1].style['left'] = '120%'
@@ -53,8 +54,34 @@ function handleNextBlock() {
     signupBlocks[0].classList.add('current')
 
     followButton.innerHTML = 'suivant >>'
-    signupButton.setAttribute('disabled', true)
     signupButton.style['background-color'] = 'rgba(255, 255, 255, 0.211)'
+    signupButton.style['display'] = 'none'
 
   }
 }
+
+
+// animate publicity slides
+setInterval(() => {
+  const currentElement = document.querySelector('.current')
+  let nextElement = document.querySelector('.current + .pub-image')
+
+
+  if (nextElement == null ) {
+    nextElement = document.querySelector('.pub-image')
+  }
+
+  nextElement.classList.add('current')
+  currentElement.classList.remove('current')
+
+}, 5000)
+
+
+document.querySelectorAll('#option-menu > button').forEach( element => {
+  element.addEventListener('click', () => {
+    const filter = document.querySelector(`#${element.value}-filter`)
+    filter.style['z-index'] = '200'
+    filter.style['opacity'] = 1
+    element.style['z-index'] = '300'
+  })
+})
