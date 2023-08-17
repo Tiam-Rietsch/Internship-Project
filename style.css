@@ -88,7 +88,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
-    height: 10vh;
+    height: 12vh;
     background-color: var(--primary-color);
     z-index: 1000;
     box-shadow: -3px 5px 12px -6px rgba(119, 119, 119, 0.75);
@@ -97,15 +97,15 @@ header {
 }
 
 #logo-image {
-    margin-top: 1.2em;
+    margin-top: 1em;
     color: var(--primary-fg);
-    height:2.5em;
-    width: 2.5em;
+    height:2em;
+    width: 2em;
 }
 
 #option-menu {
     margin-top: 0.6em;
-    width: 20%;
+    width: 15%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -114,12 +114,12 @@ header {
 #language-select {
     background-color: var(--primary-color);
     color: var(--primary-fg);
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #login-btn-link {
     color: var(--primary-fg);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     transition: 0.2s ease;
 }
@@ -129,11 +129,12 @@ header {
 }
 
 #signup-btn-link {
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: 2px solid var(--cover-color);
     border-radius: 50px;
     background-color: var(--primary-color);
     color: var(--cover-color);
+    font-size: 1em;
     transition: background-color color 0.2s ease;
 }
 
@@ -146,14 +147,63 @@ header {
 .navbar {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     height: 45%;
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    place-items: center;
-    column-gap: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+#nav-search {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 100%;
+    display: flex;
+    margin-left: 10%;
+    margin-bottom: 1em;
+    border-radius: 500px;
+    overflow: hidden;
+
+}
+
+#nav-search button {
+    height: inherit;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#nav-search button img {
+    height: 60%;
+    width: 60%;
+}
+
+#nav-search input {
+    height: inherit;
+    width: 90%;
+    border: 1px solid var(--cover-color);
+    padding-left: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.navbar nav {
+    width: 60%;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-link {
@@ -164,7 +214,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 0.7em;
     transition: 0.2s ease;
 }
 
@@ -188,7 +238,9 @@ header {
 }
 
 .nav-link.active {
-    color: var(--cover-color)
+    color: black;
+    font-size: 0.8em;
+    font-weight: 600;
 }
 
 .nav-link.active::before {
@@ -198,7 +250,7 @@ header {
     left: 50%;
     width:30%;
     transform: translate(-50%);
-    border: 2px solid var(--cover-color)
+    border: 2px solid black;
 }
 
 
@@ -507,7 +559,7 @@ header {
     left: 0;
     height: 90%;
     width: 100%;
-    background-color: #00808000;
+    background-color: #0000007e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -517,7 +569,7 @@ header {
 #login-form {
     height: 90%;
     width: 30%;
-    background-color: #5050506a;
+    background-color: #9b99996a;
     box-shadow: 0px 0px 50px -5px rgba(163, 163, 163, 0.459) inset;
     border-radius: 10px;
     backdrop-filter: blur(20px);
@@ -569,7 +621,7 @@ header {
     left: 120%;
 }
 
-.name-input {
+.group-input {
     height: fit-content;
     width: 100%;
     display: grid;
@@ -641,8 +693,8 @@ header {
 
 .picture-input {
     position: relative;
-    height: 120px;
-    width: 120px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     background-color: #ffffff6e;
     display: flex;
@@ -652,37 +704,8 @@ header {
 }
 
 
-.picture-input label {
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    transform: translateX(20%);
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    transition: 0.2s ease;
-}
 
-.picture-input label:hover {
-    background-color: rgba(255, 255, 255, 0.407);
-}
-
-.picture-input input {
-    display: none;
-}
-
-.picture-input label img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-#profile-display {
+.picture-input img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -732,6 +755,7 @@ header {
 }
 
 #signup-button {
+    display: none;
     background-color: rgba(255, 255, 255, 0.211);
     color: white;
 }

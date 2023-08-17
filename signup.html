@@ -19,16 +19,24 @@
             <a href="login.html" id="login-btn-link">Login</a>
             <a href="signup.html" id="signup-btn-link">Signup</a>
         </div>
-        <nav class="navbar">
-            <a class="nav-link active" href="">Acceuil</a>
-            <a class="nav-link" href="">A propos de nous</a>
-            <a class="nav-link" href="">Nos services</a>
-            <a class="nav-link" href="">Realiser un CV</a>
-            <a class="nav-link" href="">Trouver un stage</a>
-            <a class="nav-link" href="">Trouver une formation</a>
-            <a class="nav-link" href="">Actualite</a>
-            <a class="nav-link" href="">Nous contacter</a>
-        </nav>
+        <div class="navbar">
+            <div id="nav-search">
+                <button><img src="assets/icons/search-line.svg" alt=""></button>
+                <input type="text">
+            </div>
+
+            <nav>
+                <a class="nav-link active" href="">Acceuil</a>
+                <a class="nav-link" href="">A propos de nous</a>
+                <a class="nav-link" href="">Nos services</a>
+                <a class="nav-link" href="">Realiser un CV</a>
+                <a class="nav-link" href="">Trouver un stage</a>
+                <a class="nav-link" href="">Trouver une formation</a>
+                <a class="nav-link" href="">Actualite</a>
+                <a class="nav-link" href="">Nous contacter</a>
+
+            </nav>
+        </div>
     </header>
     <main id="signup-main">
         <div class="main-filter">
@@ -38,7 +46,7 @@
                 </div>
                 <div class="form-main">
                     <div id="block-1" class="block current">
-                        <div class="name-input">
+                        <div class="group-input">
                             <div class="form-input">
                                 <input type="text" required>
                                 <label for="">Nom</label>
@@ -60,10 +68,7 @@
                             <input type="password" required>
                             <label for="">Repeter le mot de passe</label>
                         </div>
-                        <div class="check-input">
-                            <input type="checkbox">
-                            <label for="">J'accepte les conditions de confidentialite</label>
-                        </div>
+                        <p>se connecter avec </p>
                         <div id="social-connect">
                             <a class="connect-option" href="#">
                                 <img src="assets/icons/google.svg" alt="">
@@ -75,14 +80,10 @@
                     </div>
                     <div id="block-2" class="block">
                         <div class="picture-input">
-                            <input type="file" accept=".png, .jpg, .jpeg" id="profile-picture" onchange="loadProfilePicture(event)">
-                            <label for="profile-picture">
-                                <img src="assets/icons/camera.svg" alt="">
-                            </label>
                             <img id="profile-display" src="assets/icons/user.svg" alt="">
                         </div>
                         <div class="form-input">
-                            <input type="email" required>
+                            <input type="text" required>
                             <label for="">Nom d'utilisateur</label>
                         </div>
                         <div class="form-input">
@@ -91,14 +92,22 @@
                         </div>
                         <div class="form-input">
                             <input type="password" required>
-                            <label for="">Niveau scolaire</label>
+                            <label for="">Niveau</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" required>
+                            <label for="">Matricule</label>
+                        </div>
+                        <div class="check-input">
+                            <input type="checkbox">
+                            <label for="">J'accepte les conditions de confidentialite</label>
                         </div>
                     </div>
 
                 </div>
                 <div class="form-action">
-                    <button id="signup-button" type="submit" disabled>S'inscrire</button>
                     <button id="follow-button" type="button" onclick="handleNextBlock()">suivant >></button>
+                    <button id="signup-button" type="submit">S'inscrire</button>
                     <div class="form-input">
                         <p>deja un compte ? <a href="login.html">connectez vous maintenant</a></p>
                     </div>
