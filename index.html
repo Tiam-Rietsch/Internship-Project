@@ -16,15 +16,15 @@
                 <option value="francais">Fr</option>
                 <option value="englais">Eng</option>
             </select>
-            <a href="login.html" id="login-btn-link">Login</a>
-            <a href="signup.html" id="signup-btn-link">Signup</a>
+            <button id="login-btn-link" value='login'>Login</button>
+            <button id="signup-btn-link" value="signup">Signup</button>
         </div>
         <div class="navbar">
             <div id="nav-search">
                 <button><img src="assets/icons/search-line.svg" alt=""></button>
                 <input type="text">
             </div>
-    
+
             <nav>
                 <a class="nav-link active" href="">Acceuil</a>
                 <a class="nav-link" href="">A propos de nous</a>
@@ -34,13 +34,124 @@
                 <a class="nav-link" href="">Trouver une formation</a>
                 <a class="nav-link" href="">Actualite</a>
                 <a class="nav-link" href="">Nous contacter</a>
-    
+
             </nav>
         </div>
     </header>
     <main id="index-main">
+        <div class="main-filter" id="login-filter">
+            <form id="login-form" action="">
+                <div class="form-header">
+                    <h2>Connectez vous a votre compte</h2>
+                </div>
+                <div class="form-main">
+                    <div class="block">
+                        <div class="form-input">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div id="social-connect">
+                            <a class="connect-option">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <button id="login-button" type="submit">se connecter</button>
+                    <div class="form-input">
+                        <p>Vous n'avez pas de compte ? <a href="signup.html">Inscrivez vous ici</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="main-filter" id="signup-filter">
+            <form id="signup-form" action="" method="POST" enctype="multipart/form-data">
+                <div class="form-header">
+                    <h2>Inscrivez vous c'est gratuit !</h2>
+                </div>
+                <div class="form-main">
+                    <div id="block-1" class="block current">
+                        <div class="group-input">
+                            <div class="form-input">
+                                <input type="text" required>
+                                <label for="">Nom</label>
+                            </div>
+                            <div class="form-input">
+                                <input type="text" required>
+                                <label for="">Prenom</label>
+                            </div>
+                        </div>
+                        <div class="form-input">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Repeter le mot de passe</label>
+                        </div>
+                        <p>se connecter avec </p>
+                        <div id="social-connect">
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="block-2" class="block">
+                        <div class="picture-input">
+                            <img id="profile-display" src="assets/icons/user.svg" alt="">
+                        </div>
+                        <div class="form-input">
+                            <input type="text" required>
+                            <label for="">Nom d'utilisateur</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Etablissement</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Niveau</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" required>
+                            <label for="">Matricule</label>
+                        </div>
+                        <div class="check-input">
+                            <input type="checkbox">
+                            <label for="">J'accepte les conditions de confidentialite</label>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="form-action">
+                    <button id="follow-button" type="button" onclick="handleNextBlock()">suivant >></button>
+                    <button id="signup-button" type="submit">S'inscrire</button>
+                    <div class="form-input">
+                        <p>deja un compte ? <a href="login.html">connectez vous maintenant</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <section id="hero-section">
-            <img src="assets/images/school-pub.jpg" alt="">
+            <img class="pub-image current" src="assets/images/school-pub.jpg" alt="">
+            <img class="pub-image" src="assets/images/school-pub2.jpg" alt="">
+            <img class="pub-image" src="assets/images/school-pub3.jpg" alt="">
         </section>
         <section id="main-section">
             <div id="fields-sidebar">
@@ -90,7 +201,8 @@
                         <span>BUREAUTIQUE</span>
                     </li>
                     <li class="field-item">
-                        <img src="assets/icons/ecology-science-erlenmeyer-flask-experiment-lab-flask-science-chemistry-solution.svg" alt="">
+                        <img src="assets/icons/ecology-science-erlenmeyer-flask-experiment-lab-flask-science-chemistry-solution.svg"
+                            alt="">
                         <span>GENIE DES PROCEDES</span>
                     </li>
                     <li class="field-item">
@@ -102,7 +214,8 @@
                         <span>AGRICULTURE</span>
                     </li>
                     <li class="field-item">
-                        <img src="assets/icons/computer-robot-cyborg-artificial-robotics-robot-intelligence-machine-technology-android.svg" alt="">
+                        <img src="assets/icons/computer-robot-cyborg-artificial-robotics-robot-intelligence-machine-technology-android.svg"
+                            alt="">
                         <span>MECATRONIQUE</span>
                     </li>
                     <li class="field-item">
@@ -185,7 +298,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="internship-card">
                             <img src="assets/images/UBA building (1).jpg" class="image-section" />
                             <div class="detail-section">
@@ -246,7 +359,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="internship-card">
                             <img src="assets/images/UBA building (1).jpg" class="image-section" />
                             <div class="detail-section">
@@ -302,7 +415,7 @@
                         <img src="assets/school logos/iuc logo.jpg" alt="">
                         <img src="assets/school logos/logo enspd.jpg" alt="">
                         <img src="assets/school logos/ime logo.png" alt="">
-                        <img src="assets/school logos/iuc logo.jpg" alt="">                
+                        <img src="assets/school logos/iuc logo.jpg" alt="">
                     </div>
                 </div>
                 <div class="partner-container">
@@ -367,7 +480,7 @@
             </div>
             <div id="more-info-wrapper">
                 <p>Copy right (c) Rainbow-Cl sarl 2023</p>
-    
+
                 <div class="more-info-container">
                     <img src="assets/icons/sharp-phone.svg" alt="">
                     <div class="text-section">

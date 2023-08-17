@@ -13,6 +13,7 @@ window.addEventListener('scroll', (e) => {
 
 
 
+
   if ((sidebarRect.top <=  (headerRect.top + headerRect.height)) && footerRect.top > window.innerHeight) {
     sidebar.style['position'] = 'fixed'
     sidebar.style['top'] = '12vh'
@@ -58,3 +59,29 @@ function handleNextBlock() {
 
   }
 }
+
+
+// animate publicity slides
+setInterval(() => {
+  const currentElement = document.querySelector('.current')
+  let nextElement = document.querySelector('.current + .pub-image')
+
+
+  if (nextElement == null ) {
+    nextElement = document.querySelector('.pub-image')
+  }
+
+  nextElement.classList.add('current')
+  currentElement.classList.remove('current')
+
+}, 5000)
+
+
+document.querySelectorAll('#option-menu > button').forEach( element => {
+  element.addEventListener('click', () => {
+    const filter = document.querySelector(`#${element.value}-filter`)
+    filter.style['z-index'] = '200'
+    filter.style['opacity'] = 1
+    element.style['z-index'] = '300'
+  })
+})
